@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg"> <!-- text-bg-primary p-3 -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="./imagenes/Arcimboldo.jpg" alt="logo">
+                    Verduleria <br> Archinboldo
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-warning" type="submit">Search</button>
+                    </form>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <img class="carrito_img" src="./imagenes/carrito.svg" alt="carrito">
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+    <main>
+
+        <h1>Tienda</h1>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Lista carrito</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="listaCarrito">Tu carrito está vacío...</p>
+                        <h5 class="totalCarrito"></h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-warning" id="btn_comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenedor-card1">
+
+            <!-- Aca van las targetas con los productos 👇 -->
+            <div class="contenedor-card2">
+               <!-- <div class="contenedor-card2">
+                <div class="card" style="width: 18rem;">
+                    <img src="./imagenes/Sin-título.png" class="card-img-top" alt="imagen">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto</h5>
+                        <p class="card-text">$Presio</p>
+                        <a href="#" class="btn btn-success">Añadir al carrito 🛒</a>
+                    </div>
+                </div>
+            </div>  --> 
+            </div>
+
+        </div>
+
+    </main>
+    <footer>
+        <p>Archinbolo copyright todos los derechos reservados y bla bla bla</p>
+    </footer>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/tienda.js"></script>
+    <!-- <script src="/js/pruebas.js"></script> -->
+</body>
+</html>
+

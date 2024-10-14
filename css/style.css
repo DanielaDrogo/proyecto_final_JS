@@ -1,0 +1,97 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* HEADER */
+.logo{
+    height: 57px;
+    width: 50px;
+    margin-right: 5px;
+}
+
+.navbar-brand{
+    display: flex;
+    
+}
+
+.navbar.navbar-expand-lg{
+    background-color: green;
+}
+
+.carrito_img{
+    height: 50px;
+    
+}
+
+
+/* MODAL */
+#staticBackdrop{
+    background-color: #3f3f174d ;
+}
+
+.modal-header{
+    background-color: #47471a;
+}
+
+.modal-body{
+    background-color: #47471a;
+    color: #c2ff89;
+}
+
+.modal-footer{
+    background-color: #47471a;
+}
+
+
+
+/* MAIN */
+main{
+    background-color: #47471a;
+}
+
+h1{
+    text-align: center;
+    padding: 15px;
+    color: #c7fd94;
+}
+
+.contenedor-card1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-inline: 5%;
+    
+}
+
+
+.contenedor-card2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card{
+    padding: 10px;
+    margin: 0.5%;
+    cursor: pointer;
+}
+
+.contenedor-card2 :hover{
+    background-color: #c2ff89;
+}
+
+
+
+/* FOOTER  */
+
+footer{
+    background-color: green;
+    height: 50px;
+    text-align: center;
+    color: #c7fd94;
+}
