@@ -48,7 +48,7 @@
 
 /* MAIN */
 main{
-    background-image: url(./imagenes/fondo-tela-rústica.jpg);
+    background-image: url(../imagenes/fondo-tela-rústica.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     
