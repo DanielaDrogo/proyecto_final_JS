@@ -17,12 +17,12 @@
 }
 
 .navbar.navbar-expand-lg{
-    background-color: green;
+    background-color: #448000;
+    padding: 2px;
 }
 
 .carrito_img{
     height: 50px;
-    
 }
 
 
@@ -48,13 +48,23 @@
 
 /* MAIN */
 main{
-    background-color: #47471a;
+    background-image: url(/imagenes/fondo-tela-rústica.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
 }
 
 h1{
     text-align: center;
     padding: 15px;
     color: #c7fd94;
+    
+}
+
+.form-select{
+    width: 200px;
+    margin-left: 7% ;
+    margin-bottom: 10px;
 }
 
 .contenedor-card1{
@@ -85,10 +95,13 @@ h1{
     background-color: #c2ff89;
 }
 
+.card-img-top{
+    height: 230px;
+}
+
 
 
 /* FOOTER  */
-
 footer{
     background-color: green;
     height: 50px;

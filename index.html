@@ -25,9 +25,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -63,6 +60,14 @@
     <main>
 
         <h1>Tienda</h1>
+        
+        <div class="contenedor-selector">
+            <select class="form-select" id="filtroProductos" aria-label="Default select example">
+                <option selected value="todo">Sin Filtrar...</option>
+                <option value="fruta">Fruta</option>
+                <option value="verdura">Verdura</option>
+            </select>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -108,7 +113,11 @@
         <p>Archinbolo copyright todos los derechos reservados y bla bla bla</p>
     </footer>
     <script src="./js/bootstrap.js"></script>
-    <script src="./js/tienda.js"></script>
+    <!-- <script src="./js/tienda.js"></script> -->
+
+    <script src="./js/productos.js"></script>
+    <script src="./js/carrito.js"></script>
+
     <!-- <script src="/js/pruebas.js"></script> -->
 </body>
 </html>
