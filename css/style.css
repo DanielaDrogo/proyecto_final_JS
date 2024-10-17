@@ -39,11 +39,14 @@
     background-color: #47471a;
     color: #c2ff89;
 }
+ 
+.productoCargado{
+    display: flex;
+}
 
 .modal-footer{
     background-color: #47471a;
 }
-
 
 
 /* MAIN */
@@ -73,16 +76,13 @@ h1{
     align-items: center;
     padding-bottom: 50px;
     padding-inline: 5%;
-    
 }
-
 
 .contenedor-card2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
 }
 
 .card{
@@ -98,7 +98,6 @@ h1{
 .card-img-top{
     height: 230px;
 }
-
 
 
 /* FOOTER  */

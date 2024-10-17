@@ -27,9 +27,9 @@ let productos = [
 ]
 
 // Creo todas las targetas 
-let contenedorDeTargetas = document.querySelector(`.contenedor-card2`)
+let contenedorDeTarjetas = document.querySelector(`.contenedor-card2`)
 productos.forEach((producto) => {
-    contenedorDeTargetas.innerHTML += `
+    contenedorDeTarjetas.innerHTML += `
     <div class="contenedor-card2">
         <div class="card" style="width: 18rem;">
             <img src=" ./imagenes/${producto.imagen}" class="card-img-top" alt="imagen">
@@ -42,6 +42,14 @@ productos.forEach((producto) => {
     </div>
     `;
 });
+
+
+
+
+
+
+
+
 
 
 

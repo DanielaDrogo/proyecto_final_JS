@@ -2,7 +2,7 @@
 
 let carrito = [] // Declaro el array carrito
 
-// Añadir evento click a los botones
+// Añadir evento click a los botones "añadir al carrito"
 document.querySelectorAll('.btn.btn-success').forEach((button, index) => {
     button.addEventListener('click', () => {
         carrito.push(productos[index]);
@@ -27,12 +27,20 @@ function actualizarCarrito() {
     } else {
         carrito.forEach((producto) => {
             listaCarrito.innerHTML += `
+            <div class="productoCargado">
                 <p>${producto.nombre} - $${producto.precio}</p>
+                <button type="button" class="btn btn-link">Eliminar</button>
+            </div>    
             `;
         });
 
+        // Añadir eventos de eliminación
+        document.querySelectorAll('.btn.btn-link').forEach(botonEliminar => {
+            botonEliminar.addEventListener('click', eliminarProductoCarrito);
+        });
+
         // Mostrar el total
-        totalCarrito.innerHTML = `<h5>Total: $${total}</h5>`;
+        totalCarrito.innerHTML = `Total: $${total}`;
     }
 }
 
@@ -51,6 +59,20 @@ function cargarCarrito() {
 }
 cargarCarrito();  // Cargar carrito almacenado al cargar la página
 
+// eliminar producto del carrito
+function eliminarProductoCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+    guardarCarrito();
+}
+
+// Añadir evento click a los botones de eliminar
+document.querySelectorAll('.btn.btn-link').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        eliminarProductoCarrito(index);
+    });
+});
+
 // Compro y limpio localStorage
 function comprar() { 
     localStorage.clear();
@@ -59,3 +81,10 @@ function comprar() {
     console.log('la compra fue realizada con exito');
 }
 document.querySelector('#btn_comprar').addEventListener('click', comprar);
+
+
+
+
+
+
+
