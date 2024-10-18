@@ -45,18 +45,23 @@ function actualizarCarrito() {
         // Añadir eventos de eliminación
         let botones_eliminar = document.querySelectorAll('.btn.btn-link')
         botones_eliminar.forEach(botonEliminar => {
-            botonEliminar.addEventListener('click', ()=> {
+            botonEliminar.addEventListener('click', () => {
+
 
                 // disminuir la cantidad del producto que cargue en carrito
-                
-                // if (carrito[index].cantidad < 0) {
-                //     carrito.splice(index, 1);
-                //     carrito[index].cantidad--
-                // }
-                
-                carrito = carrito.filter((productos)=> productos.nombre != botonEliminar.value);
+                let productoEliminar = carrito.find(produc => produc.nombre === botonEliminar.value);
+                let indice = carrito.indexOf(productoEliminar);
+
+                // intento que disminulla el contador de cantidad
+                if (productoEliminar.cantidad <= 1) {
+                    carrito.splice(indice, 1);
+                    cantidad--
+                }
+
+                carrito = carrito.filter((productos) => productos.nombre != botonEliminar.value);
                 actualizarCarrito();
                 guardarCarrito()
+
             })
         })    
         
@@ -89,8 +94,6 @@ function comprar() {
     console.log('la compra fue realizada con exito');
 }
 document.querySelector('#btn_comprar').addEventListener('click', comprar);
-
-
 
 
 
