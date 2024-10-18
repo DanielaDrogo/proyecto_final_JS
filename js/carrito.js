@@ -5,7 +5,15 @@ let carrito = [] // Declaro el array carrito
 // Añadir evento click a los botones "añadir al carrito"
 document.querySelectorAll('.btn.btn-success').forEach((button, index) => {
     button.addEventListener('click', () => {
-        carrito.push(productos[index]);
+
+        // si existe en el producto en el carrito, aumento la cantidad
+        if (carrito.includes(productos[index])) {
+            productos[index].cantidad++
+        } else {
+            productos[index].cantidad++
+            carrito.push(productos[index]);
+        }
+        
         console.log(`${productos[index].nombre} ha sido añadido al carrito.`);
         actualizarCarrito();
         guardarCarrito();
@@ -28,16 +36,30 @@ function actualizarCarrito() {
         carrito.forEach((producto) => {
             listaCarrito.innerHTML += `
             <div class="productoCargado">
-                <p>${producto.nombre} - $${producto.precio}</p>
-                <button type="button" class="btn btn-link">Eliminar</button>
+                <p>${producto.nombre} - $${producto.precio} - ${producto.cantidad}</p>
+                <button type="button" class="btn btn-link" value="${producto.nombre}">Eliminar</button>
             </div>    
             `;
         });
 
         // Añadir eventos de eliminación
-        document.querySelectorAll('.btn.btn-link').forEach(botonEliminar => {
-            botonEliminar.addEventListener('click', eliminarProductoCarrito);
-        });
+        let botones_eliminar = document.querySelectorAll('.btn.btn-link')
+        botones_eliminar.forEach(botonEliminar => {
+            botonEliminar.addEventListener('click', ()=> {
+
+                // disminuir la cantidad del producto que cargue en carrito
+                
+                // if (carrito[index].cantidad < 0) {
+                //     carrito.splice(index, 1);
+                //     carrito[index].cantidad--
+                // }
+                
+                carrito = carrito.filter((productos)=> productos.nombre != botonEliminar.value);
+                actualizarCarrito();
+                guardarCarrito()
+            })
+        })    
+        
 
         // Mostrar el total
         totalCarrito.innerHTML = `Total: $${total}`;
@@ -58,20 +80,6 @@ function cargarCarrito() {
     }
 }
 cargarCarrito();  // Cargar carrito almacenado al cargar la página
-
-// eliminar producto del carrito
-function eliminarProductoCarrito(index) {
-    carrito.splice(index, 1);
-    actualizarCarrito();
-    guardarCarrito();
-}
-
-// Añadir evento click a los botones de eliminar
-document.querySelectorAll('.btn.btn-link').forEach((button, index) => {
-    button.addEventListener('click', () => {
-        eliminarProductoCarrito(index);
-    });
-});
 
 // Compro y limpio localStorage
 function comprar() { 

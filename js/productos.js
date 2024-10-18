@@ -13,6 +13,7 @@ class Producto {
         this.oferta = oferta;
         this.maduracion = maduraciones[maduracion]
         this.imagen = imagen
+        this.cantidad = 0
     }
 }
 
@@ -36,7 +37,7 @@ productos.forEach((producto) => {
             <div class="card-body">
                 <h5 class="card-title"> ${producto.nombre}</h5>
                 <p class="card-text">$ ${producto.precio}</p>
-                <a href="#" class="btn btn-success">Añadir al carrito 🛒</a>
+                <a class="btn btn-success">Añadir al carrito 🛒</a>
             </div>
         </div>
     </div>
