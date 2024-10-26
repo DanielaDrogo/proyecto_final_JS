@@ -50,6 +50,10 @@ productos.forEach((producto) => {
 
 
 
+// *FETCH* //
+
+
+fetch("data.json")
 
 
 

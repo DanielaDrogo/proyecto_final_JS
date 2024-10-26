@@ -13,7 +13,7 @@ document.querySelectorAll('.btn.btn-success').forEach((button, index) => {
             productos[index].cantidad++
             carrito.push(productos[index]);
         }
-        
+
         console.log(`${productos[index].nombre} ha sido añadido al carrito.`);
         actualizarCarrito();
         guardarCarrito();
@@ -52,7 +52,7 @@ function actualizarCarrito() {
                 let productoEliminar = carrito.find(produc => produc.nombre === botonEliminar.value);
                 let indice = carrito.indexOf(productoEliminar);
 
-                // intento que disminulla el contador de cantidad
+                // intento que disminulla el contador de cantidad (T_T)
                 if (productoEliminar.cantidad <= 1) {
                     carrito.splice(indice, 1);
                     cantidad--
@@ -94,6 +94,25 @@ function comprar() {
     console.log('la compra fue realizada con exito');
 }
 document.querySelector('#btn_comprar').addEventListener('click', comprar);
+
+
+// *TOASTIFI* //
+let botonAgregarCarrito = document.querySelectorAll('.btn.btn-success');
+botonAgregarCarrito.forEach((button) => {
+    button.addEventListener('click', () => {
+
+        Toastify({
+            text: "Producto añadido al carrito",
+            gravity: "bottom",
+            duration: 1500,
+            close: true,
+            style: {
+                background: "red",
+            }
+            
+        }).showToast();
+    });
+})
 
 
 
