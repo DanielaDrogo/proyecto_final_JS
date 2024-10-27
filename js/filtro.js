@@ -15,6 +15,8 @@ document.getElementById('filtroProductos').addEventListener('change', function (
     mostrarProductos(productosFiltrados);
 });
 
+
+
 function mostrarProductos(productos) {
     // muestro solo las card de los productos filtrados
     productos.forEach((producto) => {

@@ -52,11 +52,11 @@ function actualizarCarrito() {
                 let productoEliminar = carrito.find(produc => produc.nombre === botonEliminar.value);
                 let indice = carrito.indexOf(productoEliminar);
 
-                // intento que disminulla el contador de cantidad (T_T)
-                if (productoEliminar.cantidad <= 1) {
-                    carrito.splice(indice, 1);
-                    cantidad--
-                }
+                // // intento que disminulla el contador de cantidad (T_T)
+                // if (productoEliminar.cantidad <= 1) {
+                //     carrito.splice(indice, 1);
+                //     cantidad--
+                // }
 
                 carrito = carrito.filter((productos) => productos.nombre != botonEliminar.value);
                 actualizarCarrito();
@@ -97,6 +97,7 @@ document.querySelector('#btn_comprar').addEventListener('click', comprar);
 
 
 // *TOASTIFI* //
+// aparece un mensajito cada vez que clickeo el boton de agregar al carrito
 let botonAgregarCarrito = document.querySelectorAll('.btn.btn-success');
 botonAgregarCarrito.forEach((button) => {
     button.addEventListener('click', () => {

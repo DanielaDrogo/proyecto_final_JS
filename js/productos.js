@@ -24,7 +24,9 @@ let productos = [
     new Producto("Lechuga", 0, 200, "buenos aires", false, 3, "lechuga.jpg"),
     new Producto("Manzana", 1, 500, "rio negro", false, 0, "manzanas.jpg"),
     new Producto("Zapallo", 0, 800, "buenos aires", true, 1, "zapallos.jpg"),
-    new Producto("Zanahoria", 0, 300, "buenos aires", false, 3, "zanahorias.jpg")
+    new Producto("Zanahoria", 0, 300, "buenos aires", false, 3, "zanahorias.jpg"),
+    new Producto("Anana", 1, 2000, "corrientes", false, 0, "anana.jpg"),
+    new Producto("Pera", 1, 700, "cordoba", true, 3, "peras.jpg")
 ]
 
 // Creo todas las targetas 
@@ -48,12 +50,13 @@ productos.forEach((producto) => {
 
 
 
+let promesa = fetch('data.json')
+    .then((respuesta)=> respuesta.json())
+    .then((datos)=> console.log(datos, contenedor))
+    .catch((error)=> console.log(error))
 
 
-// *FETCH* //
 
-
-fetch("data.json")
 
 
 

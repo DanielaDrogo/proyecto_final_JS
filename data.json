@@ -1,0 +1,82 @@
+[
+    {
+        "nombre": "Papa",
+        "tipo": "verdura",
+        "precio": 100,
+        "procedencia": "salta",
+        "oferta": true,
+        "maduracion": "pasado",
+        "imagen": "papas.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombre": "Banana",
+        "tipo": "fruta",
+        "precio": 1000,
+        "procedencia": "ecuador",
+        "oferta": false,
+        "maduracion": "verde",
+        "imagen": "bananas.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombre": "Lechuga",
+        "tipo": "verdura",
+        "precio": 200,
+        "procedencia": "buenos aires",
+        "oferta": false,
+        "maduracion": "fresco",
+        "imagen": "lechuga.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombre": "Manzana",
+        "tipo": "fruta",
+        "precio": 500,
+        "procedencia": "rio negro",
+        "oferta": false,
+        "maduracion": "verde",
+        "imagen": "manzanas.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombre": "Zapallo",
+        "tipo": "verdura",
+        "precio": 800,
+        "procedencia": "buenos aires",
+        "oferta": true,
+        "maduracion": "maduro",
+        "imagen": "zapallos.jpg",
+        "cantidad": 0
+    },
+    {
+        "nombre": "Zanahoria",
+        "tipo": "verdura",
+        "precio": 300,
+        "procedencia": "buenos aires",
+        "oferta": false,
+        "maduracion": "fresco",
+        "imagen": "zanahorias.jpg",
+        "cantidad": 0
+    },
+    {
+       "nombre": "Anana",
+        "tipo": "fruta",
+        "precio": 2000,
+        "procedencia": "corrientes",
+        "oferta": false,
+        "maduracion": "fresco",
+        "imagen": "anana.jpg",
+        "cantidad": 0 
+    },
+    {
+        "nombre": "Pera",
+        "tipo": "fruta",
+        "precio": 700,
+        "procedencia": "cordoba",
+        "oferta": true,
+        "maduracion": "maduro",
+        "imagen": "peras.jpg",
+        "cantidad": 0
+    }
+]
