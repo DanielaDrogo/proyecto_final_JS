@@ -1,6 +1,6 @@
 [
     {
-        "nombre": "Papa",
+        "nombre": "Papa 🥔",
         "tipo": "verdura",
         "precio": 100,
         "procedencia": "salta",
@@ -10,7 +10,7 @@
         "cantidad": 0
     },
     {
-        "nombre": "Banana",
+        "nombre": "Banana 🍌",
         "tipo": "fruta",
         "precio": 1000,
         "procedencia": "ecuador",
@@ -20,7 +20,7 @@
         "cantidad": 0
     },
     {
-        "nombre": "Lechuga",
+        "nombre": "Lechuga 🥬",
         "tipo": "verdura",
         "precio": 200,
         "procedencia": "buenos aires",
@@ -30,7 +30,7 @@
         "cantidad": 0
     },
     {
-        "nombre": "Manzana",
+        "nombre": "Manzana 🍎",
         "tipo": "fruta",
         "precio": 500,
         "procedencia": "rio negro",
@@ -40,7 +40,7 @@
         "cantidad": 0
     },
     {
-        "nombre": "Zapallo",
+        "nombre": "Zapallo 🎃",
         "tipo": "verdura",
         "precio": 800,
         "procedencia": "buenos aires",
@@ -50,7 +50,7 @@
         "cantidad": 0
     },
     {
-        "nombre": "Zanahoria",
+        "nombre": "Zanahoria 🥕",
         "tipo": "verdura",
         "precio": 300,
         "procedencia": "buenos aires",
@@ -60,7 +60,7 @@
         "cantidad": 0
     },
     {
-       "nombre": "Anana",
+       "nombre": "Anana 🍍",
         "tipo": "fruta",
         "precio": 2000,
         "procedencia": "corrientes",
@@ -70,7 +70,7 @@
         "cantidad": 0 
     },
     {
-        "nombre": "Pera",
+        "nombre": "Pera 🍐",
         "tipo": "fruta",
         "precio": 700,
         "procedencia": "cordoba",

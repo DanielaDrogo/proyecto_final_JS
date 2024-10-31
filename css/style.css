@@ -103,7 +103,16 @@ h1{
 /* FOOTER  */
 footer{
     background-color: green;
-    height: 50px;
+    height: 100px;
     text-align: center;
     color: #c7fd94;
+    padding: 1%;
 }
+
+footer div{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+

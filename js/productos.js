@@ -50,10 +50,7 @@ productos.forEach((producto) => {
 
 
 
-let promesa = fetch('data.json')
-    .then((respuesta)=> respuesta.json())
-    .then((datos)=> console.log(datos, contenedor))
-    .catch((error)=> console.log(error))
+
 
 
 

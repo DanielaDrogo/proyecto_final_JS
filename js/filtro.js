@@ -15,8 +15,7 @@ document.getElementById('filtroProductos').addEventListener('change', function (
     mostrarProductos(productosFiltrados);
 });
 
-
-
+// muestro solo los productos filtrados
 function mostrarProductos(productos) {
     // muestro solo las card de los productos filtrados
     productos.forEach((producto) => {
@@ -34,6 +33,49 @@ function mostrarProductos(productos) {
         `;
     });
 }
+
+
+
+// *BARRA DE BUSQUEDA* // 
+
+let barraDeBusqueda = document.getElementById('BarraDeBusqueda');
+barraDeBusqueda.addEventListener('input', function() {
+
+    let busqueda = barraDeBusqueda.value.toLowerCase();
+    let items = document.getElementsByClassName('contenedor-card2');
+
+    Array.from(items).forEach(function(item) {
+        let escribirProductoNombre = item.textContent.toLowerCase();
+
+       // muestra el producto solo cuando escrivo algo de lo contrario no hace nada 
+        if (escribirProductoNombre.includes(busqueda)) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
+
+// let buscarProducto = document.getElementById('botonBuscar').addEventListener('click', function() {
+    
+//     let busqueda = buscarProducto.value.toLowerCase();
+//     let items = document.getElementsByClassName('contenedor-card2');
+
+//     Array.from(items).forEach(function(item) {
+//         let escribirProductoNombre = item.textContent.toLowerCase();
+
+//         if (escribirProductoNombre.includes(busqueda)) {
+//             item.style.display = '';
+//         } else {
+//             item.style.display = 'none';
+//         }
+//     });
+
+
+// })
+
+
+
 
 
 
