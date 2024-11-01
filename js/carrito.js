@@ -16,7 +16,7 @@ function actualizarCarrito() {
             listaCarrito.innerHTML += `
                 <div class="productoCargado">
                     <p>${producto.nombre} - $${producto.precio} - ${producto.cantidad}</p>
-                    <button type="button" class="btn btn-link" value="${producto.nombre}">Eliminar</button>
+                    <button type="button" class="btn btn-link" value="${producto.nombre}"><strong>Eliminar</strong></button>
                 </div>
                 `;
         });

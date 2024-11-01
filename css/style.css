@@ -47,6 +47,11 @@
     background-color: #47471a;
 }
 
+.btn.btn-link{
+    color: #ff8a8a;
+    padding-top: 0px;
+}
+
 
 /* MAIN */
 main{
