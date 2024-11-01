@@ -54,6 +54,7 @@ main{
     background-image: url(../imagenes/fondo-tela-rústica.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
+    height: 160vh;
     
 }
 

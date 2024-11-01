@@ -1,53 +1,81 @@
 // ~SELECCIONADOR DE PRODUCTOS~ //
 
-// Filtro de productos al cambiar la selección
+let contenedorDeTarjetas = document.querySelector(`.contenedor-card2`)
+
 document.getElementById('filtroProductos').addEventListener('change', function () {
-    let filtro = this.value;
-    console.log('Filtro seleccionado:', filtro);
-    let productosFiltrados = productos;
+    fetch('data.json')
+        .then((respuesta) => respuesta.json())
+        .then((datos) => {
+            let filtro = this.value;
+            let productosFiltrados = datos;
+            if (filtro !== 'todo') {
+                productosFiltrados = datos.filter(producto => producto.tipo === filtro);
+            }
 
-    if (filtro !== 'todo') {
-        productosFiltrados = productos.filter(producto => producto.tipo === filtro);
-    }
+            contenedorDeTarjetas.innerHTML = '';
+            mostrarProductos(productosFiltrados);
+        })
+        .catch((error) => console.log(error));
 
-    // Limpiar el contenedor antes de agregar las nuevas tarjetas
-    contenedorDeTarjetas.innerHTML = '';
-    mostrarProductos(productosFiltrados);
 });
 
-// muestro solo los productos filtrados
 function mostrarProductos(productos) {
-    // muestro solo las card de los productos filtrados
-    productos.forEach((producto) => {
+    let contenedorDeTarjetas = document.querySelector('.contenedor-card2');
+    productos.forEach((producto, index) => {
         contenedorDeTarjetas.innerHTML += `
         <div class="contenedor-card2">
             <div class="card" style="width: 18rem;">
-                <img src=" ./imagenes/${producto.imagen}" class="card-img-top" alt="imagen">
+                <img src="./imagenes/${producto.imagen}" class="card-img-top" alt="imagen">
                 <div class="card-body">
-                    <h5 class="card-title"> ${producto.nombre}</h5>
+                    <h5 class="card-title">${producto.nombre}</h5>
                     <p class="card-text">$ ${producto.precio}</p>
-                    <a href="#" class="btn btn-success">Añadir al carrito 🛒</a>
+                    <a class="btn btn-success" data-index="${index}">Añadir al carrito 🛒</a>
                 </div>
             </div>
         </div>
         `;
     });
+
+    document.querySelectorAll('.btn.btn-success').forEach((button) => {
+        button.addEventListener('click', () => {
+            const index = button.getAttribute('data-index'); 
+            const producto = productos[index];
+
+            const encontrado = carrito.find(item => item.nombre === producto.nombre);
+            if (encontrado) {
+                encontrado.cantidad++;
+            } else {
+                producto.cantidad = 1;
+                carrito.push(producto);
+            }
+            actualizarCarrito();
+            guardarCarrito();
+
+            Toastify({
+                text: "Producto añadido al carrito",
+                gravity: "bottom",
+                duration: 1500,
+                close: true,
+                style: {
+                    background: "red",
+                }
+            }).showToast();
+        });
+    });
 }
 
 
-
-// *BARRA DE BUSQUEDA* // 
+// ~BARRA DE BUSQUEDA~ //
 
 let barraDeBusqueda = document.getElementById('BarraDeBusqueda');
-barraDeBusqueda.addEventListener('input', function() {
+barraDeBusqueda.addEventListener('input', function () {
 
     let busqueda = barraDeBusqueda.value.toLowerCase();
     let items = document.getElementsByClassName('contenedor-card2');
 
-    Array.from(items).forEach(function(item) {
+    Array.from(items).forEach(function (item) {
         let escribirProductoNombre = item.textContent.toLowerCase();
 
-       // muestra el producto solo cuando escrivo algo de lo contrario no hace nada 
         if (escribirProductoNombre.includes(busqueda)) {
             item.style.display = '';
         } else {
@@ -56,23 +84,6 @@ barraDeBusqueda.addEventListener('input', function() {
     });
 });
 
-// let buscarProducto = document.getElementById('botonBuscar').addEventListener('click', function() {
-    
-//     let busqueda = buscarProducto.value.toLowerCase();
-//     let items = document.getElementsByClassName('contenedor-card2');
-
-//     Array.from(items).forEach(function(item) {
-//         let escribirProductoNombre = item.textContent.toLowerCase();
-
-//         if (escribirProductoNombre.includes(busqueda)) {
-//             item.style.display = '';
-//         } else {
-//             item.style.display = 'none';
-//         }
-//     });
-
-
-// })
 
 
 
