@@ -100,16 +100,3 @@ botonAgregarCarrito.forEach((button) => {
         }).showToast();
     });
 })
-
-
-
-
-
-
-
-
-
-
-
-
-

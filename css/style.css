@@ -13,7 +13,6 @@
 
 .navbar-brand{
     display: flex;
-    
 }
 
 .navbar.navbar-expand-lg{
@@ -55,14 +54,12 @@ main{
     background-repeat: no-repeat;
     background-size: cover; 
     height: 160vh;
-    
 }
 
 h1{
     text-align: center;
     padding: 15px;
     color: #c7fd94;
-    
 }
 
 .form-select{
@@ -119,6 +116,3 @@ footer div{
     color: #c2ff89;
     height: 25px;
 }
-
-
-

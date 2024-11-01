@@ -48,12 +48,4 @@ fetch('data.json')
     })
     .catch((error) => console.log(error));
 
-
-
-
-
-
-
-
-
-
+    

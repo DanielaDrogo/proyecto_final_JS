@@ -83,12 +83,3 @@ barraDeBusqueda.addEventListener('input', function () {
         }
     });
 });
-
-
-
-
-
-
-
-
-
