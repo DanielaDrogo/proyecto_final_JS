@@ -116,3 +116,27 @@ footer div{
     color: #c2ff89;
     height: 25px;
 }
+
+
+@media (max-width: 600px) {
+    
+    main{
+        height: auto;
+    }
+
+    footer{
+        padding-top: 20px;
+        height: 200px;
+    }
+
+    footer div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .redes{
+        display: flex;
+        flex-direction: row;
+    }
+}
