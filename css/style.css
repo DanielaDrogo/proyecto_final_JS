@@ -118,7 +118,7 @@ footer div{
 }
 
 
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
 
     main{
         height: auto;
@@ -139,4 +139,4 @@ footer div{
         display: flex;
         flex-direction: row;
     }
-} */
+}
